@@ -116,8 +116,8 @@ class DataManager(object):
             examples.append(
                 (
                     arr,
-                    f.split("_")[0],
-                    label_to_array(f.split("_")[0], self.char_vector),
+                    f.split(".")[0],
+                    label_to_array(f.split(".")[0], self.char_vector),
                 )
             )
             count += 1
