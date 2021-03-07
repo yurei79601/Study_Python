@@ -4,9 +4,26 @@ import tensorflow as tf
 from scipy.misc import imread, imresize, imsave
 
 
-def sparse_tuple_from(sequences, dtype=np.int32):
+def sparse_tuple_from(sequences: np.ndarray, dtype=np.int32) -> tuple:
     """
-        Inspired (copied) from https://github.com/igormq/ctc_tensorflow_example/blob/master/utils.py
+    Inspired (copied) from https://github.com/igormq/ctc_tensorflow_example/blob/master/utils.py
+    把原本的標籤資料，轉換為與 batch index 做對應的 tuple 給模型讀取做訓練
+
+    Args:
+        sequences: 形狀為 (batch_size, label_width) 的 array
+
+    Returns:
+        (indices of batch, 數值型標籤, input size)
+
+    Examples:
+        indices: [[ 0,  0],
+                  [ 0,  1],
+                  [ 0,  2],
+                  [ 0,  3],
+                  [ 0,  4],
+                  [ 1,  0], ...
+        數值型標籤: [8, 59, 56,  3, 39, ...]
+        inputs size: (64, 5)
     """
 
     indices = []
