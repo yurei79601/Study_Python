@@ -1,0 +1,1 @@
+* This is yurei's personal notes, and the codes come from [Belval/CRNN](https://github.com/Belval/CRNN)
