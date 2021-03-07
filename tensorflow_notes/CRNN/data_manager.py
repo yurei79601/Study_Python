@@ -70,7 +70,7 @@ class DataManager(object):
 
             batch_y = np.reshape(np.array(raw_batch_y), (-1))
 
-            batch_dt = sparse_tuple_from(np.reshape(np.array(raw_batch_la), (-1)))
+            batch_dt = sparse_tuple_from(np.array(raw_batch_la))
 
             raw_batch_x = np.swapaxes(raw_batch_x, 1, 2)
 
@@ -139,7 +139,7 @@ class DataManager(object):
 
             batch_y = np.reshape(np.array(raw_batch_y), (-1))
 
-            batch_dt = sparse_tuple_from(np.reshape(np.array(raw_batch_la), (-1)))
+            batch_dt = sparse_tuple_from(np.array(raw_batch_la))
 
             raw_batch_x = np.swapaxes(raw_batch_x, 1, 2)
 
@@ -167,7 +167,7 @@ class DataManager(object):
 
             batch_y = np.reshape(np.array(raw_batch_y), (-1))
 
-            batch_dt = sparse_tuple_from(np.reshape(np.array(raw_batch_la), (-1)))
+            batch_dt = sparse_tuple_from(np.array(raw_batch_la))
 
             raw_batch_x = np.swapaxes(raw_batch_x, 1, 2)
 
