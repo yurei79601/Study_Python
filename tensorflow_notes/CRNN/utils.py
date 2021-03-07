@@ -1,7 +1,5 @@
+from scipy.misc import imresize
 import numpy as np
-import tensorflow as tf
-
-from scipy.misc import imread, imresize, imsave
 
 
 def sparse_tuple_from(sequences: np.ndarray, dtype=np.int32) -> tuple:
