@@ -1,3 +1,6 @@
+"""
+utility functions for CRNN
+"""
 from scipy.misc import imresize
 import numpy as np
 
