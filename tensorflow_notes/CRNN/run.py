@@ -1,3 +1,4 @@
+import os
 import argparse
 from crnn import CRNN
 
@@ -39,6 +40,7 @@ def parse_arguments():
         type=str,
         nargs="?",
         help="The path to the file containing the examples (training samples)",
+        default=os.path.expanduser("~/Desktop/My_file/study_讀書筆記/computer_vision/英雄內戰/random_digits")
     )
     parser.add_argument(
         "-bs", "--batch_size", type=int, nargs="?", help="Size of a batch", default=64
@@ -76,7 +78,7 @@ def parse_arguments():
     parser.add_argument(
         "--use_trdg",
         action="store_true",
-        help="Generate training data on the fly with TextRecognitionDataGenerator",
+        help="Generate training data on the fly with TextRecognitionDataGenerator"
     )
     parser.add_argument(
         "-l",
